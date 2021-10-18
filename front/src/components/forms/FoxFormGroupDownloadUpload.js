@@ -28,8 +28,10 @@ const FoxFormGroupDownloadUpload = props => {
             name={props.uploadInfo}
             value={props.downloadValue}
             onClick={props.downloadFile}
+            className="button2"
+            style={{marginLeft:"10px"}}
           >
-            {props.buttonText ? props.buttonText : 'Download scan'}
+            {props.buttonText ? props.buttonText : 'Download'}
           </CButton>
         </CCol>
         <CCol md="5">

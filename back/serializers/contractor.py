@@ -17,6 +17,7 @@ class ContractorListSerializer(serializers.ModelSerializer):
             "related_company",
             "contact_person",
             "company_phone",
+            "email",
         ]
 
     def get_contact_person(self, obj):

@@ -10,6 +10,11 @@ import {
   getProjectList,
   setProjectId,
 } from "../../../actions";
+import {
+  CCard,
+  CCardHeader,
+  CCardTitle,
+} from "@coreui/react";
 import { WithLoading } from "../../loadings";
 
 const getBadge = (status) => {

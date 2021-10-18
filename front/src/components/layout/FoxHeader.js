@@ -62,14 +62,14 @@ const FoxHeader = (props) => {
       </CHeaderBrand>
 
       <CHeaderNav className="mr-auto">
-        <CCreateElement
+        {props.projectId ? <CCreateElement
           items={props.navigation}
           components={{
             CHeaderNavItem,
             CHeaderNavLink,
             FoxHeaderNavLink,
           }}
-        />
+        />: null}
       </CHeaderNav>
 
       <CHeaderNav className="px-3">
@@ -80,12 +80,12 @@ const FoxHeader = (props) => {
         </div>
       </CHeaderNav>
 
-      <CSubheader className="px-3 justify-content-between">
+      {/* <CSubheader className="px-3 justify-content-between">
         <CBreadcrumbRouter
           className="border-0 c-subheader-nav m-0 px-0 px-md-3"
           routes={routes}
         />
-      </CSubheader>
+      </CSubheader> */}
     </CHeader>
   );
 };

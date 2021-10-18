@@ -96,6 +96,7 @@ class WorkerReview extends Component {
             </p>
             <CButton
               variant="outline"
+              className="buttonw"
               color="success"
               id="license_scan"
               name="license_scan"
@@ -112,6 +113,7 @@ class WorkerReview extends Component {
             </p>
             <CButton
               variant="outline"
+              className="buttonw"
               color="success"
               id="passport_scan"
               name="passport_scan"
@@ -128,6 +130,7 @@ class WorkerReview extends Component {
             </p>
             <CButton
               variant="outline"
+              className="buttonw"
               color="success"
               id="safety_green_card_scan"
               name="safety_green_card_scan"
@@ -152,6 +155,7 @@ class WorkerReview extends Component {
             </p>
             <CButton
               variant="outline"
+              className="buttonw"
               color="success"
               id="safety_quiz_answer"
               name="safety_quiz_answer"
@@ -167,6 +171,7 @@ class WorkerReview extends Component {
             </p>
             <CButton
               variant="outline"
+              className="buttonw"
               color="success"
               id="personal_declaration"
               name="personal_declaration"

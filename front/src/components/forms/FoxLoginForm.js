@@ -13,6 +13,7 @@ import {
   CInputGroupText,
   CButton,
   CImg,
+  CCard,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import DjangoCSRFToken from "django-react-csrftoken";
@@ -55,9 +56,10 @@ class FoxLoginForm extends Component {
                 <CImg width="100%" src={logo} className="mb-2" />
               </CCol>
             </CRow>
+            <CCard className="p-3">
             <CRow className="mt-2 mb-2" alignHorizontal="center">
               <CCol className="mx-auto">
-                <h1 className="fox-login-welcome">Welcome to FOX!</h1>
+                {/* <h1 className="fox-login-welcome">Welcome to FOX!</h1> */}
                 <p className="fox-login-welcome">
                   {" "}
                   Please log in to your account.
@@ -115,7 +117,7 @@ class FoxLoginForm extends Component {
                   ) : null}
                   <CFormGroup>
                     <CButton
-                      shape="pill"
+                      className="buttonw"
                       type="submit"
                       value="Submit"
                       color="dark"
@@ -128,13 +130,14 @@ class FoxLoginForm extends Component {
                 <CButton
                   type="link"
                   size="sm"
-                  className="align-self-center"
+                  className="align-self-center float-right"
                   onClick={this.showForgetPasswordModal}
                 >
                   Forgot password?
                 </CButton>
               </CCol>
             </CRow>
+            </CCard>
           </CContainer>
         </CCol>
       </CRow>

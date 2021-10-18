@@ -65,10 +65,11 @@ class FoxTableWithProjectDeleteOption extends Component {
               <CCardTitle>{this.props.tableName}</CCardTitle>
               {this.props.showNewButton ? (
                 <CLink
-                  className="btn btn-pill btn-outline-success"
+                  className="btn primary-btn ml-2"
+                  style={{backgroundColor: "#F63854", color: "white"}}
                   to={`${this.props.match.url}/new`}
                 >
-                  Add new
+                  Add Project
                 </CLink>
               ) : null}
             </CCardHeader>
@@ -81,12 +82,12 @@ class FoxTableWithProjectDeleteOption extends Component {
                 hover
                 striped
                 sorter
-                tableFilter={{ placeholder: "Search..." }}
-                columnFilter
+                tableFilter={{ placeholder: "Search" , label: " "}}
+                // columnFilter
                 size="sm"
-                itemsPerPage={10}
-                itemsPerPageSelect
                 pagination
+                itemsPerPage={10}
+                itemsPerPageSelect={{label: "Results per page"}}
                 scopedSlots={{
                   [linkName]: (item) => (
                     <td>
@@ -96,9 +97,8 @@ class FoxTableWithProjectDeleteOption extends Component {
                     </td>
                   ),
                   application_status: (item) => (
-                    <td>
+                    <td style={{fontSize:"1.2rem", textAlign:"center"}}>
                       <CBadge
-                        shape="pill"
                         color={this.props.getBadge(item.application_status)}
                       >
                         {item.application_status}
@@ -106,9 +106,9 @@ class FoxTableWithProjectDeleteOption extends Component {
                     </td>
                   ),
                   project_status: (item) => (
-                    <td className="d-flex align-items-center">
+                    <td className="d-flex align-items-center" style={{fontSize:"1.2rem", textAlign:"center"}}>
                       <CBadge
-                        shape="pill"
+                        style={{size:"50px"}}
                         color={this.props.getBadge(item.project_status)}
                       >
                         {item.project_status}

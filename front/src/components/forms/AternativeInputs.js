@@ -20,22 +20,20 @@ class AlternativeInputs extends Component {
         <CFormGroup>
           <CButtonGroup>
             <CButton
-              className="fox-option-choice-button"
+              className="fox-option-choice-button button2"
               onClick={() => this.handleCheck("card_number_id")}
-              shape="pill"
               disabled={this.props.submitting}
-              color="dark"
+              color="danger"
               variant="outline"
               active={active_option === "card_number_id"}
             >
               Card Number ID
             </CButton>
             <CButton
-              className="fox-option-choice-button"
+              className="fox-option-choice-button button2"
               onClick={() => this.handleCheck("passport")}
-              shape="pill"
               disabled={this.props.submitting}
-              color="dark"
+              color="danger"
               variant="outline"
               active={active_option === "passport"}
             >

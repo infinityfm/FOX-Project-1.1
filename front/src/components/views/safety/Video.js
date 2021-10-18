@@ -85,8 +85,7 @@ class SafetyVideo extends Component {
               <CCol>
                 {personal_declaration_template ? (
                   <CButton
-                    shape="pill"
-                    className="mr-3 mb-3"
+                    className="buttonw mr-3 mb-3"
                     variant="outline"
                     color="info"
                     id={personal_declaration_template}

@@ -83,9 +83,9 @@ class ContractorCreate extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
-              <CCardTitle>Add New Contractor</CCardTitle>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
+              <CCardTitle style={{fontWeight:"bold"}}>Add New Contractor</CCardTitle>
               <CCardSubtitle>
                 Fill up the form below to add a new Contractor
               </CCardSubtitle>
@@ -158,15 +158,16 @@ class ContractorCreate extends Component {
                   </CFormGroup>
                   <CFormGroup>
                     <CButton
-                      shape="pill"
                       type="submit"
                       color="dark"
                       variant="outline"
                       disabled={this.props.submitting}
                       block
+                      className="buttonw"
+                      style={{width:"25%", marginLeft:"75%"}}
                     >
                       <SubmitSpinner submitting={this.props.submitting} />
-                      Create contractor
+                      Create
                     </CButton>
                   </CFormGroup>
                   {this.state.error ? (

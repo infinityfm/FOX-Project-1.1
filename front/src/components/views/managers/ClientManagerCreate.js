@@ -20,9 +20,11 @@ import { getProfileFetch } from "../../../actions";
 import { SubmitSpinner, WithLoading, WithLoadingSpinner } from "../../loadings";
 import { handleError } from "../../errors";
 import { FoxReactSelectFormGroup } from "../../forms";
+import "../../style1.css";
+
 
 const positions = [
-  { id: -1, position: "Choose manager position" },
+  { id: -1, position: "Position" },
   { id: "SafeMan", position: "Safety Manager" },
   { id: "SecMan", position: "Security Manager" },
   { id: "SecOff", position: "Security Officer" },
@@ -114,8 +116,8 @@ class ClientManagerCreate extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
               <CCardTitle>Add New Manager</CCardTitle>
               <CCardSubtitle>
                 Fill up the form below to add a new Manager
@@ -125,7 +127,7 @@ class ClientManagerCreate extends Component {
               <WithLoadingSpinner loading={this.props.loading}>
                 <CForm onSubmit={this.handleSubmit}>
                   <DjangoCSRFToken />
-                  <CFormGroup>
+                  {/* <CFormGroup>
                     <CInput
                       id="username"
                       name="username"
@@ -136,12 +138,12 @@ class ClientManagerCreate extends Component {
                       disabled={this.props.submitting}
                       required
                     />
-                  </CFormGroup>
+                  </CFormGroup> */}
                   <CFormGroup>
                     <CInput
                       id="name"
                       name="name"
-                      placeholder="Manager name"
+                      placeholder="Full Name"
                       value={this.state.name}
                       onChange={this.handleChange}
                       readOnly={this.props.submitting}
@@ -184,15 +186,16 @@ class ClientManagerCreate extends Component {
                   </CFormGroup>
                   <CFormGroup>
                     <CButton
+                      className="buttonw"
                       disabled={this.props.submitting}
-                      shape="pill"
                       type="submit"
                       color="dark"
                       variant="outline"
                       block
+                      style={{width:"25%", marginLeft:"75%"}}
                     >
                       <SubmitSpinner submitting={this.props.submitting} />
-                      Create manager
+                      Create
                     </CButton>
                   </CFormGroup>
                   {this.state.error ? (

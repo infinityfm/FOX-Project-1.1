@@ -84,9 +84,9 @@ class ContractorEdit extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
-              <CCardTitle>Contractor Details</CCardTitle>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
+              <CCardTitle style={{fontWeight:"bold"}}>Contractor Details</CCardTitle>
             </CCardHeader>
             <CCardBody>
               <WithLoadingSpinner loading={this.props.loading}>
@@ -173,12 +173,13 @@ class ContractorEdit extends Component {
                   </CFormGroup>
                   <CFormGroup>
                     <CButton
-                      shape="pill"
+                      className="buttonw"
                       type="submit"
                       color="dark"
                       variant="outline"
                       disabled={this.props.submitting}
                       block
+                      style={{width:"25%", marginLeft:"75%"}}
                     >
                       <SubmitSpinner submitting={this.props.submitting} />
                       Save changes

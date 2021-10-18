@@ -185,13 +185,13 @@ class ProjectEdit extends Component {
       <CRow>
         <CCol>
           {this.props.role === "CliAdm" ? (
-            <CCard>
-              <CCardHeader>
-                <CCardTitle>Project Details</CCardTitle>
+            <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+              <CCardHeader style={{textAlign:"left"}}>
+                <CCardTitle><b>Project Details</b></CCardTitle>
               </CCardHeader>
               <CCardBody>
                 <WithLoadingSpinner loading={this.props.loading}>
-                  <CForm onSubmit={this.handleSubmit}>
+                  <CForm onSubmit={this.handleSubmit} style={{width:"100%"}}>
                     <DjangoCSRFToken />
                     <CFormGroup>
                       <CLabel htmlFor="name">Title</CLabel>
@@ -286,7 +286,7 @@ class ProjectEdit extends Component {
                     <div className="mb-2 ">
                       <strong>Add documents to this project:</strong>
                     </div>
-                    <MultipleFileUploadButton />
+                    <MultipleFileUploadButton className="form-control" />
                     <div className="h5 small">*Multiple files allowed.</div>
                     <div className="h5 small">
                       **Allowed file types: .doc, .docx, .xls, .xlsx, .pdf.
@@ -307,11 +307,12 @@ class ProjectEdit extends Component {
                       disabled={
                         this.props.submitting || fileCheck.moreThen32MB(docs)
                       }
-                      shape="pill"
+                      className="buttonw"
                       type="submit"
                       color="dark"
                       variant="outline"
                       block
+                      style={{width:"25%", marginLeft:"75%"}}
                     >
                       <SubmitSpinner submitting={this.props.submitting} />
                       Save changes

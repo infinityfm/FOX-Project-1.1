@@ -176,8 +176,8 @@ class WorkerCreate extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
               <CCardTitle>New Worker</CCardTitle>
               <CCardSubtitle>
                 Fill up the form below to add a new Worker
@@ -290,12 +290,13 @@ class WorkerCreate extends Component {
                     <CButton
                       disabled={this.props.submitting}
                       onClick={this.handleSimpleSubmit}
-                      shape="pill"
+                      className="buttonw"
                       type="submit"
                       color="dark"
                       variant="outline"
+                      style={{width:"25%", marginLeft:"75%"}}
                       block>
-                      <SubmitSpinner submitting={this.props.submitting} />Create Worker</CButton>
+                      <SubmitSpinner submitting={this.props.submitting} />Create</CButton>
                   </CFormGroup>
                   {this.state.error ? <p>{this.state.error}</p> : null}
                 </CForm>

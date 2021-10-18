@@ -95,9 +95,9 @@ class ClientManagerEdit extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
-              <CCardTitle>Manager details</CCardTitle>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
+              <CCardTitle style={{fontWeight:"bold"}}>Manager Details</CCardTitle>
             </CCardHeader>
             <CCardBody>
               <WithLoadingSpinner loading={this.props.loading}>
@@ -178,11 +178,11 @@ class ClientManagerEdit extends Component {
                   <CFormGroup>
                     <CButton
                       disabled={this.props.submitting}
-                      shape="pill"
                       type="submit"
                       color="dark"
                       variant="outline"
-                      block>
+                      block
+                      style={{backgroundColor: "#F63854", color: "white", width:"25%", marginLeft:"75%"}}>
                       <SubmitSpinner submitting={this.props.submitting} />
                       Save changes
                     </CButton>

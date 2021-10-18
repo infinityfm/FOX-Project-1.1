@@ -3,4 +3,4 @@ import ContractorCreate from './ContractorCreate'
 import ContractorEdit from './ContractorEdit'
 import ContractorDetail from './ContractorDetail'
 
-export { ContractorList, ContractorCreate, ContractorEdit }
+export { ContractorList, ContractorCreate, ContractorEdit, ContractorDetail }

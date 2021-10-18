@@ -7,6 +7,12 @@ const getDashboardLayout = (userRole = "Dum", projectId = null) => {
           sidebar: [
             {
               _tag: "CSidebarNavItem",
+              name: "Project",
+              to: `/projects`,
+              icon: "cil-speedometer",
+            },
+            {
+              _tag: "CSidebarNavItem",
               name: "Project Detail",
               to: `/projects/${projectId}`,
               icon: "cil-speedometer",
@@ -23,6 +29,18 @@ const getDashboardLayout = (userRole = "Dum", projectId = null) => {
               name: "PTW",
               to: `/projects/${projectId}/ptw`,
             },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Worker",
+              to: `/workers`,
+              icon: "cil-user",
+            },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Safety",
+              to: `/safety/video`,
+              icon: "cil-user",
+            },
             // {
             //   _tag: "CSidebarNavItem",
             //   name: "3. Submit Proposal",
@@ -32,42 +50,18 @@ const getDashboardLayout = (userRole = "Dum", projectId = null) => {
           header_nav: [
             {
               _tag: "CHeaderNavItem",
-              id: "head_nav_workers",
-              className: "px-3",
-              _children: [
-                {
-                  _tag: "FoxHeaderNavLink",
-                  id: "head_nav_link_workers",
-                  to: "/workers",
-                  linktext: "Workers",
-                },
-              ],
+              name: "Project Detail",
+              to: `/projects/${projectId}`,
             },
             {
               _tag: "CHeaderNavItem",
-              id: "head_nav_projects",
-              className: "px-3",
-              _children: [
-                {
-                  _tag: "FoxHeaderNavLink",
-                  id: "head_nav_link_projects",
-                  to: "/projects",
-                  linktext: "Projects",
-                },
-              ],
+              name: "Related docs",
+              to: `/projects/${projectId}/related_documents`,
             },
             {
               _tag: "CHeaderNavItem",
-              id: "head_nav_safety_video",
-              className: "px-3",
-              _children: [
-                {
-                  _tag: "FoxHeaderNavLink",
-                  id: "head_nav_link_safety_video",
-                  to: "/safety/video",
-                  linktext: "Safety",
-                },
-              ],
+              name: "PTW",
+              to: `/projects/${projectId}/ptw`,
             },
           ],
         };
@@ -77,9 +71,27 @@ const getDashboardLayout = (userRole = "Dum", projectId = null) => {
           sidebar: [
             {
               _tag: "CSidebarNavItem",
-              name: "Dashboard",
-              to: "/dashboard",
-              icon: "cil-speedometer",
+              name: "Projects",
+              to: "/projects",
+              icon: "cil-file",
+            },
+            // {
+            //   _tag: "CSidebarNavItem",
+            //   name: "Dashboard",
+            //   to: "/dashboard",
+            //   icon: "cil-speedometer",
+            // },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Approvals",
+              to: "/approvals",
+              icon: "cil-bookmark",
+            },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Safety",
+              to: "/safety/video",
+              icon: "cil-warning",
             },
           ],
           header_nav: [
@@ -128,11 +140,37 @@ const getDashboardLayout = (userRole = "Dum", projectId = null) => {
       case "CliAdm":
         dashboard = {
           sidebar: [
+            // {
+            //   _tag: "CSidebarNavItem",
+            //   name: "Dashboard",
+            //   to: "/dashboard",
+            //   icon: "cil-speedometer",
+            // },
             {
               _tag: "CSidebarNavItem",
-              name: "Dashboard",
-              to: "/dashboard",
-              icon: "cil-speedometer",
+              name: "Projects",
+              to: "/projects",
+              className: "px-3",
+            },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Managers",
+              to: "/managers",
+              className: "px-3",
+              icon: "cil-user",
+            },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Contractors",
+              to: "/contractors",
+              className: "px-3",
+              icon: "cil-user",
+            },
+            {
+              _tag: "CSidebarNavItem",
+              name: "Safety",
+              to: "/safety/presets",
+              className: "px-3",
             },
           ],
           header_nav: [

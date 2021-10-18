@@ -116,12 +116,12 @@ class PTWToBeSubmitted extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
             <WithLoadingSpinner loading={this.props.loading}>
               <CCardHeader>
                 <CRow>
                   <CCol>
-                    <CCardTitle>PTW Form</CCardTitle>
+                    <CCardTitle style={{fontWeight:"bold"}}>PTW Form</CCardTitle>
                     <CCardSubtitle>
                       Please, fill in this form to submit proposal for this
                       project
@@ -251,15 +251,16 @@ class PTWToBeSubmitted extends Component {
                 <CButton
                   form="proposal-form"
                   type="submit"
+                  className="buttonw"
                   disabled={this.props.submitting || !project.responsible_person || project.workers.length < 1}
-                  shape="pill"
                   type="submit"
                   color="dark"
                   variant="outline"
+                  style={{width:"25%", marginLeft:"75%"}}
                   block
                 >
                   <SubmitSpinner submitting={this.props.submitting} />
-                  Submit proposal
+                  Submit
                 </CButton>
                 {this.state.error ? <p>{this.state.error}</p> : null}
               </CCardFooter>

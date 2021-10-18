@@ -32,7 +32,7 @@ class FoxEntityListTable extends Component {
               </CCardTitle>
               {this.props.showNewButton ?
                 <CLink
-                  className="btn btn-pill btn-outline-success"
+                  className="btn danger-btn ml-2"
                   to={`${this.props.match.url}/new`}
                 >
                   Add new
@@ -50,8 +50,8 @@ class FoxEntityListTable extends Component {
                 striped
                 bordered
                 sorter
-                tableFilter={{ placeholder: "Search..." }}
-                columnFilter
+                tableFilter={{ placeholder: "Search", label:" " }}
+                // columnFilter
                 size="sm"
                 itemsPerPage={10}
                 itemsPerPageSelect
@@ -69,7 +69,7 @@ class FoxEntityListTable extends Component {
                     ),
                   'application_status':
                     (item) => (
-                      <td>
+                      <td style={{fontSize:"1.2rem"}}>
                         <CBadge shape="pill" color={this.props.getBadge(item.application_status)}>
                           {item.application_status}
                         </CBadge>
@@ -77,7 +77,7 @@ class FoxEntityListTable extends Component {
                     ),
                   'project_status':
                     (item) => (
-                      <td className="d-flex align-items-center">
+                      <td style={{fontSize:"1.2rem"}}>
                         <CBadge shape="pill" color={this.props.getBadge(item.project_status)}>
                           {item.project_status}
                         </CBadge>

@@ -10,9 +10,11 @@ import {
     CSidebarMinimizer,
     CSidebarNavDropdown,
     CSidebarNavItem,
+    CSidebarNavLink
 } from '@coreui/react'
 import { connect } from "react-redux"
 import { withRouter } from "react-router-dom"
+import { FoxSidebarNavLink } from "../../utils";
 
 const FoxSidebar = (props) => {
     const dispatch = useDispatch()
@@ -24,21 +26,20 @@ const FoxSidebar = (props) => {
             onShowChange={(val) => dispatch({ type: 'set', sidebarShow: val })}
         >
             <CSidebarBrand className="d-md-down-none" to="/">
-                <h2>{props.company ? props.company : "FOX"}</h2>
+                <h2 style={{fontWeight:'bold'}}>{props.company ? props.company : "FOX"}</h2>
             </CSidebarBrand>
-            <CSidebarNav>
-                {props.projectId ? <CCreateElement
+            <CSidebarNav style={{fontSize:"1rem", fontWeight:"400"}}>
+                <CCreateElement
                     items={props.navigation}
                     components={{
                         CSidebarNavDivider,
                         CSidebarNavDropdown,
                         CSidebarNavItem,
-                        CSidebarNavTitle
+                        CSidebarNavTitle,
                     }}
-                /> : null}
-
+                />
             </CSidebarNav>
-            <CSidebarMinimizer className="c-d-md-down-none" />
+            {/* <CSidebarMinimizer className="c-d-md-down-none" /> */}
         </CSidebar>
     )
 }

@@ -65,10 +65,11 @@ class FoxTableWithContractorDeleteOption extends Component {
               <CCardTitle>{this.props.tableName}</CCardTitle>
               {this.props.showNewButton ? (
                 <CLink
-                  className="btn btn-pill btn-outline-success"
+                  className="btn primary-btn ml-2"
+                  style={{backgroundColor: "#F63854", color: "white"}}
                   to={`${this.props.match.url}/new`}
                 >
-                  Add new
+                  Add Contractor
                 </CLink>
               ) : null}
             </CCardHeader>
@@ -81,12 +82,12 @@ class FoxTableWithContractorDeleteOption extends Component {
                 hover
                 striped
                 sorter
-                tableFilter={{ placeholder: "Search..." }}
-                columnFilter
+                tableFilter={{ placeholder: "Search...", label:" "}}
+                // columnFilter
                 size="sm"
                 itemsPerPage={10}
                 itemsPerPageSelect
-                pagination
+                pagination={{}}
                 scopedSlots={{
                   [linkName]: (item) => (
                     <td>

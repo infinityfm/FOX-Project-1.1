@@ -39,8 +39,9 @@ const FoxFormGroupInputDownloadUpload = props => {
             name={props.uploadInfo}
             value={props.downloadValue}
             onClick={props.downloadFile}
+            className="button2"
           >
-            Download scan
+            Download
       				</CButton>
         </CCol>
         <CCol md="5">

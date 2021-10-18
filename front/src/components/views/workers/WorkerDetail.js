@@ -236,9 +236,9 @@ class WorkerDetail extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
-              <CCardTitle>Worker Detail</CCardTitle>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
+              <CCardTitle style={{fontWeight:"bold"}}>Worker Detail</CCardTitle>
             </CCardHeader>
             <CCardBody>
               <WithLoadingSpinner loading={this.props.loading}>
@@ -350,11 +350,12 @@ class WorkerDetail extends Component {
                   <CFormGroup>
                     <CButton
                       disabled={this.props.loading || this.props.submitting}
-                      shape="pill"
+                      className="buttonw"
                       type="submit"
                       color="dark"
                       variant="outline"
                       block
+                      style={{marginLeft:"75%", width:"25%"}}
                     >
                       <SubmitSpinner submitting={this.props.submitting} />
                       Save changes
@@ -362,11 +363,12 @@ class WorkerDetail extends Component {
                   </CFormGroup>
                   <CButton
                     disabled={this.props.loading || this.props.submitting}
-                    shape="pill"
+                    className="button2"
                     color="danger"
                     variant="outline"
                     onClick={this.showDeleteModal}
                     block
+                    style={{marginLeft:"75%", width:"25%"}}
                   >
                     <SubmitSpinner submitting={this.props.submitting} />
                     Delete Worker

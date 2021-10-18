@@ -41,6 +41,7 @@ const MultipleFileUploadButton = (props) => {
     <CCol className="mb-3" sm="3">
       <CInputFile
         id="file-multiple-input"
+        className="form-control"
         custom
         multiple
         onChange={handleFilesUpload}

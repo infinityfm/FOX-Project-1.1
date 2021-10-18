@@ -69,7 +69,7 @@ class ResetPasswordModal extends Component {
           {success ? null : (
             <CButton
               disabled={this.props.submitting}
-              shape="pill"
+              className="buttonw"
               color="primary"
               onClick={this.handleSubmit}
             >
@@ -79,7 +79,7 @@ class ResetPasswordModal extends Component {
           )}{" "}
           <CButton
             disabled={this.props.submitting}
-            shape="pill"
+            className="button2"
             color="dark"
             onClick={this.props.hideModal}
           >

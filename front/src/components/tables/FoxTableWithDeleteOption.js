@@ -65,10 +65,11 @@ class FoxTableWithDeleteOption extends Component {
               <CCardTitle>{this.props.tableName}</CCardTitle>
               {this.props.showNewButton ? (
                 <CLink
-                  className="btn btn-pill btn-outline-success"
+                  className="btn"
+                  style={{backgroundColor: "#F63854", color: "white"}}
                   to={`${this.props.match.url}/new`}
                 >
-                  Add new
+                  Add Worker
                 </CLink>
               ) : null}
             </CCardHeader>
@@ -81,8 +82,8 @@ class FoxTableWithDeleteOption extends Component {
                 hover
                 striped
                 sorter
-                tableFilter={{ placeholder: "Search..." }}
-                columnFilter
+                tableFilter={{ placeholder: "Search", label: " " }}
+                // columnFilter
                 size="sm"
                 itemsPerPage={10}
                 itemsPerPageSelect

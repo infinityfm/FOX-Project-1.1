@@ -83,9 +83,9 @@ class SafetyPresets extends Component {
 
   render = () => {
     return (
-      <CCard>
-        <CCardHeader>
-          <CCardTitle>Safety Requirements Settings</CCardTitle>
+      <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+        <CCardHeader style={{textAlign:"left"}}>
+          <CCardTitle style={{fontWeight:"bold"}}>Safety Requirements Settings</CCardTitle>
           <CCardSubtitle>
             Insert the url link to the safety requirements video and upload the
             safety quiz and personal declaration templates
@@ -132,19 +132,20 @@ class SafetyPresets extends Component {
                     </CFormGroup>
                     <CFormGroup>
                       <CButton
-                        shape="pill"
+                        className="buttonw"
                         type="submit"
                         color="dark"
                         variant="outline"
                         block
+                        style={{width:"25%", marginLeft:"75%"}}
                       >
                         <SubmitSpinner submitting={this.props.submitting} />
-                        Submit Safety Requirements Settings
+                        Submit
                       </CButton>
                     </CFormGroup>
                     {this.state.error ? <p>{this.state.error}</p> : null}
                   </CForm>
-                  <CLink to="/safety/video">See preview</CLink>
+                  <CLink to="/safety/video" style={{marginLeft:"90%"}}>See preview</CLink>
                 </CCol>
               </CRow>
             ) : (

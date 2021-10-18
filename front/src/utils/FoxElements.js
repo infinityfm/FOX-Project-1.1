@@ -1,5 +1,5 @@
 import React from 'react'
-import { CHeaderNavLink } from '@coreui/react'
+import { CHeaderNavLink, CSidebarNavLink } from '@coreui/react'
 
 const FoxHeaderNavLink = (props) => {
     return (
@@ -8,3 +8,11 @@ const FoxHeaderNavLink = (props) => {
 }
 
 export { FoxHeaderNavLink }
+
+const FoxSidebarNavLink = (props) => {
+    return (
+        <CSidebarNavLink {...props} >{props.linktext}</CSidebarNavLink>
+    )
+}
+
+export { FoxSidebarNavLink }

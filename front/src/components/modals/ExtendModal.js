@@ -92,8 +92,8 @@ class ExtendModal extends Component {
         <CModalFooter>
           <CButton
             disabled={this.props.submitting}
-            shape="pill"
             color="primary"
+            className="buttonw"
             onClick={this.handleSubmit}
           >
             <SubmitSpinner submitting={this.props.submitting} />
@@ -101,8 +101,8 @@ class ExtendModal extends Component {
           </CButton>{" "}
           <CButton
             disabled={this.props.submitting}
-            shape="pill"
             color="dark"
+            className="button2"
             onClick={this.props.hideModal}
           >
             <SubmitSpinner submitting={this.props.submitting} />

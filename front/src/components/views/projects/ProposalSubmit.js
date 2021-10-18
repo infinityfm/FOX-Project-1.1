@@ -155,7 +155,6 @@ class ProposalSubmit extends Component {
             </CCardBody>
                 <CCardFooter>
                   <CButton
-                    shape="pill"
                     type="submit"
                     color="dark"
                     variant="outline"

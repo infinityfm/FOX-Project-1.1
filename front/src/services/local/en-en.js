@@ -1,6 +1,6 @@
 const dictionary = {
-    related_company: "Organization",
-    company_phone: "Contact Person Phone No",
+    related_company: "Company",
+    company_phone: "Phone No",
     name: "name",
 };
 

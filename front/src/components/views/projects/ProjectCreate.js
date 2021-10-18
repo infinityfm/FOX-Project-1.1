@@ -196,15 +196,15 @@ class ProjectCreate extends Component {
   render = () => {
     const options = this.props.options
       ? this.props.options.map((option) => {
-          return { value: option.id, label: option["Organization"] };
+          return { value: option.id, label: option["Company"] };
         })
       : null;
     return (
       <CRow>
         <CCol>
-          <CCard>
-            <CCardHeader>
-              <CCardTitle>Add New Project</CCardTitle>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
+            <CCardHeader style={{textAlign:"left"}}>
+              <CCardTitle style={{fontWeight:"bold"}}>Add New Project</CCardTitle>
               <CCardSubtitle>
                 Fill up the form below to add a new Project
               </CCardSubtitle>
@@ -319,14 +319,15 @@ class ProjectCreate extends Component {
                     this.props.submitting ||
                     fileCheck.moreThen32MB(this.props.docs)
                   }
-                  shape="pill"
                   onClick={this.handleSubmit}
                   color="dark"
                   variant="outline"
                   block
+                  className="buttonw"
+                  style={{width:"25%", marginLeft:"75%"}}
                 >
                   <SubmitSpinner submitting={this.props.submitting} />
-                  Create Project
+                  Create
                 </CButton>
                 {this.state.error ? <p>{this.state.error}</p> : null}
                 <InvalidFileTrueMessage />

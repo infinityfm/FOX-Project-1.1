@@ -64,7 +64,7 @@ class ForgetPasswordModal extends Component {
         onClose={this.props.hideModal}
         color="dark"
       >
-        <CModalHeader closeButton>
+        <CModalHeader style={{backgroundColor: "#F63854"}} closeButton>
           <CModalTitle>Request password reset</CModalTitle>
         </CModalHeader>
         <CModalBody>
@@ -100,7 +100,7 @@ class ForgetPasswordModal extends Component {
           {success ? null : (
             <CButton
               disabled={this.props.submitting}
-              shape="pill"
+              className="buttonw"
               color="primary"
               onClick={this.handleSubmit}
             >
@@ -110,7 +110,7 @@ class ForgetPasswordModal extends Component {
           )}{" "}
           <CButton
             disabled={this.props.submitting}
-            shape="pill"
+            className="button2"
             color="dark"
             onClick={this.props.hideModal}
           >

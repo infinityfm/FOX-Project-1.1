@@ -161,7 +161,7 @@ class ApprovalDetail extends Component {
     return (
       <CRow>
         <CCol>
-          <CCard>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
             <CCardHeader>
               <CCardTitle>Attached Documents</CCardTitle>
             </CCardHeader>
@@ -176,6 +176,7 @@ class ApprovalDetail extends Component {
                             <h6>{document.name}</h6>
                             {document.filled_file !== null ? (
                               <CButton
+                                className="button2"
                                 variant="outline"
                                 color="primary"
                                 key={`cb-${document.id}`}
@@ -201,7 +202,7 @@ class ApprovalDetail extends Component {
             </CCardBody>
           </CCard>
 
-          <CCard>
+          <CCard style={{marginRight:"25%", marginLeft:"25%"}}>
             <CCardHeader>
               <CCardTitle>Workers</CCardTitle>
             </CCardHeader>
@@ -249,12 +250,12 @@ class ApprovalDetail extends Component {
               </WithLoadingSpinner>
             </CCardBody>
           </CCard>
-          <CCard>
+          <CCard style={{marginLeft:"25%", marginRight:"25%"}}>
             <CCardBody>
               <CForm onSubmit={this.handleSubmit}>
                 <DjangoCSRFToken />
                 <CFormGroup>
-                  <CLabel htmlFor="description">Comments:</CLabel>
+                  <CCardTitle htmlFor="description">Comments:</CCardTitle>
                   <CTextarea
                     id="description"
                     name="description"
@@ -263,23 +264,24 @@ class ApprovalDetail extends Component {
                     readOnly={this.props.submitting}
                   ></CTextarea>
                 </CFormGroup>
-                <CFormGroup>
+                <CFormGroup style={{marginLeft:"80%"}}>
                   <CButton
                     className="mr-3"
-                    shape="pill"
+                    className="buttonw"
                     type="submit"
                     name="status"
                     value="Approved"
                     color="success"
                     variant="outline"
                     onClick={this.handleChange}
+                    style={{marginRight:"10px"}}
                     disabled={this.props.submitting}
                   >
                     <SubmitSpinner submitting={this.props.submitting} />
                     Approve
                   </CButton>
                   <CButton
-                    shape="pill"
+                    className="button2"
                     type="submit"
                     name="status"
                     value="Rejected"

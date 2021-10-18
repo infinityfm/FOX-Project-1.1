@@ -44,7 +44,7 @@ class ProjectDetail extends Component {
       <React.Fragment>
         <CCard>
           <CCardHeader className="d-flex justify-content-between">
-            <CCardTitle>Project details</CCardTitle>
+            <CCardTitle>Project Details</CCardTitle>
             {["Created", "Rejected", "Submitted"].includes(this.state.status) &&  this.props.role === "CliAdm" ? (
               <CLink to={`${this.props.location.pathname}/edit`}>
                 Edit project

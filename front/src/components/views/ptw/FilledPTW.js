@@ -91,19 +91,19 @@ const FilledPTW = (props) => {
               <CCardText>{project.location}</CCardText>
             </CCol>
             <CCol xs="6" md="2" className="mb-3">
-              <strong>Organization:</strong>
+              <strong>Company:</strong>
             </CCol>
             <CCol xs="6" md="4" className="mb-3">
               <CCardText>{project.organization}</CCardText>
             </CCol>
             <CCol xs="6" md="2" className="mb-3">
-              <strong>Person in Charge Name:</strong>
+              <strong>Person in Charge:</strong>
             </CCol>
             <CCol xs="6" md="4" className="mb-3">
               <CCardText>{project.applicant_name}</CCardText>
             </CCol>
             <CCol xs="6" md="2" className="mb-3">
-              <strong>Person in Charge Phone No:</strong>
+              <strong>Phone No:</strong>
             </CCol>
             <CCol xs="6" md="4" className="mb-3">
               <CCardText>{project.applicant_phone}</CCardText>
